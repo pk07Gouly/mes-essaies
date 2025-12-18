@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoriel - Mon Site Personnel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Tutoriel de Mon Site Personnel</h1>
+            <p>Apprenez à naviguer et utiliser toutes les fonctionnalités</p>
+        </header>
+
+        <div class="tutorial-grid">
+            <div class="tutorial-card" onclick="showProgress(25)">
+                <div class="icon">📱</div>
+                <h2>Navigation</h2>
+                <p>Découvrez comment naviguer efficacement sur le site</p>
+                <ul class="steps">
+                    <li>Menu principal en haut de page</li>
+                    <li>Sections accessibles en un clic</li>
+                    <li>Barre de recherche intégrée</li>
+                    <li>Navigation mobile optimisée</li>
+                </ul>
+                <button class="btn">Commencer</button>
+            </div>
+
+            <div class="tutorial-card" onclick="showProgress(50)">
+                <div class="icon">💼</div>
+                <h2>Portfolio</h2>
+                <p>Explorez mes projets et réalisations</p>
+                <ul class="steps">
+                    <li>Galerie de projets interactive</li>
+                    <li>Filtres par catégorie</li>
+                    <li>Détails de chaque projet</li>
+                    <li>Liens vers démos en direct</li>
+                </ul>
+                <button class="btn">Explorer</button>
+            </div>
+
+            <div class="tutorial-card" onclick="showProgress(75)">
+                <div class="icon">📧</div>
+                <h2>Contact</h2>
+                <p>Comment me contacter facilement</p>
+                <ul class="steps">
+                    <li>Formulaire de contact rapide</li>
+                    <li>Liens réseaux sociaux</li>
+                    <li>Email direct disponible</li>
+                    <li>Temps de réponse sous 24h</li>
+                </ul>
+                <button class="btn">Contacter</button>
+            </div>
+
+            <div class="tutorial-card" onclick="showProgress(100)">
+                <div class="icon">⚙️</div>
+                <h2>Fonctionnalités</h2>
+                <p>Toutes les options avancées du site</p>
+                <ul class="steps">
+                    <li>Mode sombre/clair</li>
+                    <li>Téléchargement de CV</li>
+                    <li>Blog et articles</li>
+                    <li>Système de partage</li>
+                </ul>
+                <button class="btn">Découvrir</button>
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2>📹 Vidéo Tutoriel Complète</h2>
+            <div class="video-placeholder">
+                🎬 Espace réservé pour votre vidéo de présentation
+            </div>
+            <p style="color: #666; line-height: 1.8;">
+                Cette section peut contenir une vidéo complète montrant toutes les fonctionnalités 
+                de votre site personnel. Vous pouvez y intégrer une vidéo YouTube, Vimeo ou tout 
+                autre service de streaming vidéo.
+            </p>
+        </div>
+
+        <div class="progress-tracker">
+            <h2>📊 Votre Progression</h2>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressBar">0%</div>
+            </div>
+            <p style="color: #666; margin-top: 15px;">
+                Cliquez sur les cartes ci-dessus pour suivre votre progression dans le tutoriel
+            </p>
+        </div>
+
+        <div class="tips">
+            <h3>💡 Conseils Utiles</h3>
+            <ul>
+                <li>Explorez chaque section dans l'ordre pour une meilleure compréhension</li>
+                <li>Utilisez les raccourcis clavier pour naviguer plus rapidement</li>
+                <li>N'hésitez pas à me contacter si vous avez des questions</li>
+                <li>Consultez régulièrement le blog pour les mises à jour</li>
+                <li>Ajoutez le site à vos favoris pour un accès rapide</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Mon Site Personnel - Tous droits réservés</p>
+            <p>Créé avec ❤️ pour vous guider</p>
+        </footer>
+    </div>
+
+    <script>
+        let currentProgress = 0;
+
+        function showProgress(progress) {
+            currentProgress = Math.max(currentProgress, progress);
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = currentProgress + '%';
+            progressBar.textContent = currentProgress + '%';
+        }
+
+        document.querySelectorAll('.tutorial-card').forEach((card, index) => {
+            card.style.animationDelay = (index * 0.1) + 's';
+        });
+    </script>
+</body>
+</html>
